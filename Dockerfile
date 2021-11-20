@@ -15,9 +15,8 @@ RUN \
   mkdir -p /mnt/HDA_ROOT/.config && \
   # For some reason this directory needs to exist to be able to install the QDK
   # package.
-  mkdir -p /share/CACHEDEV1_DATA/.qpkg/QDK
-
-RUN ln -sf /mnt/HDA_ROOT/.config /etc/config && \
-    ln -sf /root /share/homes/admin
+  mkdir -p /share/CACHEDEV1_DATA/.qpkg/QDK && \
+  ln -sf /mnt/HDA_ROOT/.config /etc/config && \
+  ln -sf /root /share/homes/admin
 
 CMD ["/bin/bash"]
